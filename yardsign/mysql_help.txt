@@ -1,0 +1,98 @@
+PHP/MYSQL - Birthdays Database
+The files contained in this collection make up an integrated database management system.
+Included are a simple interface, and scripts for adding, editing, displaying and deleting records.
+There are 3 utility scripts for testing your db connection, creating a table and adding fields.
+
+The scripts can be easily modified to create your own unique db management tool.
+These scripts should be used in conjunction with our PHP/MySQL tutorial at www.createafreewebsite.net
+The tutorial will teach you to build your database and processing scripts on your PC and Export it to your website.
+
+If using the IndigoAMPP server, download and extract the scripts in your
+C:\indigoampp\apache-2.2.11\htdocs folder.
+Extract there and you will create a birthdays folder inside htdocs.
+You can run the scripts from there.
+
+Utility Files
+test_db.php (*) RUN FIRST
+Then create your database named newdb from the phpMyAdim panel. Lesson in tutorial.
+
+birthdays_create_table.php (*)  RUN AFTER YOU CREATE DB
+IF YOU DON'T GET AN ERROR WHEN RUNNING THIS SCRIPT, YOUR TABLE HAS BEEN CREATED.
+Next, TRY RUNNING THE INSERT RECORD SCRIPT FROM THE DBASE_INTERFACE.
+
+birthdays_add_fields.php (Do not run this script until you get to the lesson on altering tables)
+You should complete the lessons in our tutorial in sequence.
+
+Management Files
+birthdays_dbase_interface.php
+Once you create the table you can access all the form scripts from the interface.
+
+Add Records (2 scripts)
+birthdays_insert_form.php (Run this form script when inserting records))
+birthdays_insert_record.php (*)
+
+
+Display records (1 script)
+birthdays_display_records.php (*)
+
+
+Update Records (3 scripts)
+birthdays_update_form.php (*) (Run this form script when updating records.)
+birthdays_change_form.php (*)
+birthdays_change_record.php (*)
+
+
+Delete Records (2 scripts)
+birthdays_delete_form.php (*) (Run this form script when deleting records)
+birthdays_delete_record.php (*)
+
+ADDING NEW FIELDS
+birthdays_add_fields.php
+Do not run this script until you have completed all lessons in sequence up to delete record.
+This script will add several new fields to the newdb database.
+Once you run this script you will need to modify all of the scripts to include the new fields.
+This script can also be used to add your own desired fields to the birthdays table.
+
+Note:  We have purposely kept the scripts very basic in structure.
+       No includes or subroutines are used.
+       When you get some experience with PHP, you can make the scripts more concise by using subroutines.
+
+
+
+
+INSTRUCTIONS FOR INDIGOAMPP USERS
+NOTE: You don't need to make any changes on the scripts if you are running them on the latest release of IndigoAMPP.
+Since the server is configured for access by a user named root without a password on localhost all of the scripts have been set up with those parameters.
+They are set up to use the database named newdb which you will create in the second lesson.
+
+TEST ALL THE SCRIPTS AND MAKE SURE THAY ARE WORKING.
+IF YOU WANT TO CREATE YOUR OWN TABLE WITH ADDITIONAL OR DIFFERENT FIELDS,
+CHANGE THE CREATE TABLE SCRIPT FIRST.
+THEN UPDATE ALL OF THE OTHER SCRIPTS TO REFLECT THE FIELD CHANGES.
+
+If you are testing on IndigoAMPP, run the test_db.php script first.
+Then create the database named newdb from the phpMyAdmin panel.
+If you got a successful connection, run the birthdays_create_table.php script.
+All of the other scripts will then be functional.
+You will of course want to insert records before you start displaying, updating or deleting records.
+
+THESE INSTRUCTIONS ARE ONLY FOR THOSE UPLOADING SCRIPTS TO A WEB HOST'S SERVER.
+(* Scripts marked with (*) will require the change to the $link and $db lines ( See below ) for connecting to the database.  Do not change them until you get a successful connection using the test_db.php script.
+Be sure to CHMOD all scripts to 755 after uploading.(If required by web host)
+
+1.. Create an MySqL database using your web host's control panel.  Record the servername, port number if required,  (provided by your host ), name of database, username and password.
+
+2.. If using on your web host's server, Change the line below on the test_db.php script to the appropriate settings supplied by your web host.
+      $link = mysql_connect('servername.com: 3306', 'username', 'password'); (remove :3306 if not required)
+3.. Upload, CHMOD to 755 and run the test_db.php script until you get a 'successful connection' message.  
+4.. Change the birthdays_create_table.php script to reflect the settings from the test_db.php script.
+       Change this line to reflect the name of your database.  $db="nameof_database";
+5.. Upload, CHMOD to 755 and create the table 'birthdays' by running birthdays_create_table.php
+6..  Make the $link and $db changes on the rest of the scripts, upload, CHMOD to 755 and run birthdays_dbase_interface.php
+.
+There are mutliple scripts for adding,updating and deleting records.  In each instance the script that contains the word '_form' is executed first.  
+
+
+
+
+

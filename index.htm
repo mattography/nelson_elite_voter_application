@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Voter App</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://a248.e.akamai.net/passets.pinterest.com.s3.amazonaws.com/css/mobile_f9510ec7.css" type="text/css" media="all"/>
+    <!-- Mobile Specific Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="apple-touch-icon" href="icon.png"/>
+    <link rel="apple-touch-startup-image" href="https://a248.e.akamai.net/passets.pinterest.com.s3.amazonaws.com/images/mobile_startup_screen.png">
+  
+<script type="text/javascript">
+	if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+		document.write('<link rel="stylesheet" href="add2home.css">');
+		document.write('<script type="application\/javascript" src="add2home.js" charset="utf-8"><\/s' + 'cript>');
+	}
+</script>  
+</head>
+<body class="hdpi">
+        <div class="page short" id="wrapper">
+            <div id="logo_wrapper">
+                <div id="logo">                    
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="middle_cont" id="login">
+                <h2><img src="main_logo.png"></h2>
+                <div id="social">
+                </div>
+            </div> <!-- End Middle container -->
+            <div class="divider bottom"></div>
+            <div class="last_cont" id="connect">
+                <form action="login-exec.php" method="POST" accept-charset="utf-8">
+                    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='4d71586b5a2e98690d5990eb86b323d8' /></div>					
+					<input class="user" name="login" id="login" placeholder="Username" type="text">
+                    <input class="user password" name="password" id="password" placeholder="Password" type="password">
+                    <input type="submit" name="Submit" value="Login"/>
+                </form>
+
+            </div> <!-- End Bottom container -->
+
+            <div class="push"></div>
+        </div> <!-- End Wrapper -->
+    </body> <!-- End Body -->
+
+
+  <div id="SearchAutocompleteHolder"></div>
+  
+</html>
