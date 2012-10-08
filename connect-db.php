@@ -4,7 +4,7 @@
  Allows PHP to connect to your database
 */
 
- // Database Variables (edit with your own server information)
+ // Database Variables
  $server = 'db390469035.db.1and1.com';
  $user = 'dbo390469035';
  $pass = 'c15c0p1x';
